@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'About Dhikrama — Founder-Led Project Portfolio';
+const description = 'Learn how Dhikrama works as an independent umbrella brand for practical projects, services, and ventures.';
+---
+
+<Layout title={title} description={description} canonicalPath="/about">
+  <section class="hero">
+    <div class="narrow stack-lg">
+      <span class="eyebrow">About Dhikrama</span>
+      <h1>An independent umbrella brand for practical projects.</h1>
+      <p class="lead">
+        Dhikrama exists to build, manage, and connect practical products and services through a clear portfolio identity.
+      </p>
+    </div>
+  </section>
+
+  <section class="section soft-section" aria-labelledby="what-it-means">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <h2 id="what-it-means">What Dhikrama means here</h2>
+        <p>
+          Dhikrama is an independent portfolio brand for several projects and services. It may include digital products, operational services, logistics, and other ventures as the portfolio grows.
+        </p>
+        <p>
+          The portfolio is currently founder-led or independently managed. Each project may have its own brand, website, focus, and service model.
+        </p>
+      </div>
+      <div class="panel stack">
+        <h2>Simple and transparent positioning</h2>
+        <ul class="plain-list">
+          <li>Dhikrama is an independent portfolio brand.</li>
+          <li>Each project can operate with its own dedicated website.</li>
+          <li>Portfolio references are used for management, operational, or identification clarity.</li>
+          <li>Dhikrama does not need to present itself as a formal corporate structure.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="role">
+    <div class="narrow stack-lg">
+      <span class="eyebrow">Portfolio role</span>
+      <h2 id="role">Dhikrama helps visitors understand the ecosystem.</h2>
+      <p>
+        Instead of competing with project websites, Dhikrama introduces the broader portfolio and directs visitors to the right destination. Nagili remains the dedicated logistics and transportation brand. Boringan remains its own dedicated project.
+      </p>
+      <div class="button-row">
+        <a class="button primary" href="/projects">View projects</a>
+        <a class="button secondary" href="/legal">Read disclaimer</a>
+      </div>
+    </div>
+  </section>
+</Layout>

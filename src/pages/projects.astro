@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { projects } from '../data/projects';
+
+const title = 'Projects — Dhikrama Portfolio';
+const description = 'Explore independent projects in the Dhikrama portfolio, including Nagili and Boringan.';
+---
+
+<Layout title={title} description={description} canonicalPath="/projects">
+  <section class="hero">
+    <div class="narrow stack-lg">
+      <span class="eyebrow">Projects</span>
+      <h1>Independent projects in the Dhikrama portfolio.</h1>
+      <p class="lead">
+        This page lists active projects connected through Dhikrama. Each project may operate with its own brand, website, and service focus.
+      </p>
+    </div>
+  </section>
+
+  <section class="section soft-section" aria-labelledby="project-list">
+    <div class="container stack-lg">
+      <h2 id="project-list">Portfolio overview</h2>
+      <div class="grid grid-2">
+        {projects.map((project) => (
+          <article class="card project-card">
+            <div class="project-meta">
+              {project.categories.map((category) => <span class="tag">{category}</span>)}
+            </div>
+            <h3>{project.name}</h3>
+            <p>{project.summary}</p>
+            <div class="button-row">
+              <a class="button secondary" href={`/projects/${project.slug}`}>Read project profile</a>
+              <a class="button primary" href={project.url} rel="noopener noreferrer">{project.cta}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="future-projects">
+    <div class="narrow panel stack">
+      <span class="eyebrow">Built to extend</span>
+      <h2 id="future-projects">Future projects can be added clearly.</h2>
+      <p>
+        New projects can be added as separate profiles with their own categories, links, and relationship statements, while keeping Dhikrama focused on portfolio-level credibility and navigation.
+      </p>
+    </div>
+  </section>
+</Layout>

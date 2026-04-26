@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Nagili — Logistics Project in the Dhikrama Portfolio';
+const description = 'Nagili is a logistics and transportation service in the Dhikrama project portfolio.';
+const projectSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Nagili',
+  url: 'https://dhikrama.com/projects/nagili',
+  sameAs: 'https://nagili.dhikrama.com',
+  description,
+  isPartOf: {
+    '@type': 'CreativeWork',
+    name: 'Dhikrama Project Portfolio',
+    url: 'https://dhikrama.com',
+  },
+};
+---
+
+<Layout title={title} description={description} canonicalPath="/projects/nagili" structuredData={projectSchema}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Project profile</span>
+        <h1>Nagili</h1>
+        <p class="lead">
+          Nagili is a transportation and logistics service focused on trucking, moving, cargo delivery, and business distribution needs.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://nagili.dhikrama.com" rel="noopener noreferrer">Visit Nagili</a>
+          <a class="button secondary" href="/projects">Back to projects</a>
+        </div>
+      </div>
+      <aside class="panel stack">
+        <span class="eyebrow">Relationship</span>
+        <h2>Nagili is part of the Dhikrama project portfolio.</h2>
+        <p>
+          This page summarizes Nagili at the portfolio level. For service details, availability, and inquiries, use the official Nagili website.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section soft-section" aria-labelledby="nagili-summary">
+    <div class="container grid grid-3">
+      <article class="card">
+        <h2 id="nagili-summary">What it is</h2>
+        <p>Nagili is a logistics and transportation service for practical delivery, moving, trucking, and distribution needs.</p>
+      </article>
+      <article class="card">
+        <h2>Who it serves</h2>
+        <p>Nagili serves individuals, households, and businesses that need reliable transportation and logistics support.</p>
+      </article>
+      <article class="card">
+        <h2>Service categories</h2>
+        <ul class="plain-list">
+          <li>Trucking and vehicle-based transport</li>
+          <li>Moving support</li>
+          <li>Cargo delivery</li>
+          <li>Business distribution needs</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="nagili-positioning">
+    <div class="narrow panel stack">
+      <span class="eyebrow">Portfolio note</span>
+      <h2 id="nagili-positioning">Dhikrama does not replace Nagili’s dedicated website.</h2>
+      <p>
+        Dhikrama explains how Nagili fits into the broader portfolio. Nagili remains the dedicated brand for logistics and transportation information, service inquiries, and customer-facing details.
+      </p>
+      <p>
+        Nagili combines direct operational handling and trusted operational partners when needed.
+      </p>
+      <a class="button primary" href="https://nagili.dhikrama.com" rel="noopener noreferrer">Open the official Nagili website</a>
+    </div>
+  </section>
+</Layout>

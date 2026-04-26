@@ -1,130 +1,115 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { projects } from '../data/projects';
+
+const title = 'Dhikrama — Independent Project & Venture Portfolio';
+const description = 'Dhikrama is an independent portfolio of practical products, services, and ventures, including Nagili and Boringan.';
 ---
 
-<Layout title="Dhikrama - Portfolio">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Dhikrama's</span> Portfolio</h1>
-		<p class="instructions">
-			Developer & Creator focused on building impactful solutions.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<li class="link-card">
-				<a href="https://www.boringan.com/" target="_blank" rel="noopener noreferrer">
-					<h2>
-						Boringan Mitra Gali
-						<span>&rarr;</span>
-					</h2>
-					<p>
-						Specialized service for boring & cable excavation (galian kabel).
-					</p>
-				</a>
-			</li>
-			<li class="link-card">
-				<a href="https://nagili.dhikrama.com/" target="_blank" rel="noopener noreferrer">
-					<h2>
-						Nagili
-						<span>&rarr;</span>
-					</h2>
-					<p>
-						Android application for logistics and transportation services.
-					</p>
-				</a>
-			</li>
-		</ul>
-	  <div class="legal-links" style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #333; text-align: center;">
-      <h3 style="font-size: 1.2rem; color: #e0e0e0; margin-bottom: 1rem;">Legal & Policies</h3>
-      <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 2rem;">
-        <li><a href="/nagili/privacy" style="color: #b392f0; text-decoration: none;">Privacy Policy</a></li>
-        <li><a href="/nagili/terms" style="color: #b392f0; text-decoration: none;">Terms of Service</a></li>
-      </ul>
+<Layout title={title} description={description} canonicalPath="/">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Independent portfolio brand</span>
+        <h1>Practical projects, services, and ventures under one clear umbrella.</h1>
+        <p class="lead">
+          Dhikrama is an independent portfolio of digital products, services, and ventures built to solve practical problems in the real world.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button primary" href="/projects">Explore projects</a>
+          <a class="button secondary" href="/about">About Dhikrama</a>
+        </div>
+      </div>
+      <aside class="panel stack" aria-labelledby="portfolio-summary">
+        <span class="eyebrow">Portfolio snapshot</span>
+        <h2 id="portfolio-summary">Founder-led and independently managed.</h2>
+        <p>
+          Dhikrama acts as a trust layer, credibility layer, and navigation hub for independent projects with their own websites and service focus.
+        </p>
+        <ul class="plain-list">
+          <li>Nagili for logistics and transportation.</li>
+          <li>Boringan as an independent project in the portfolio.</li>
+          <li>Future projects can be added without changing the overall structure.</li>
+        </ul>
+      </aside>
     </div>
-  </main>
-</Layout>
+  </section>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-		text-align: center;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+  <section class="section soft-section" aria-labelledby="what-is-dhikrama">
+    <div class="narrow stack-lg">
+      <span class="eyebrow">What Dhikrama is</span>
+      <h2 id="what-is-dhikrama">An umbrella brand for independent projects.</h2>
+      <p class="lead">
+        Dhikrama is a founder-led portfolio of independent projects, including logistics, digital services, and practical technology products.
+      </p>
+      <p>
+        Each project may operate with its own brand, website, and service model. Dhikrama provides a clear way to understand how these projects relate to one another without presenting itself as a formal corporate group.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="featured-projects">
+    <div class="container stack-lg">
+      <div class="stack">
+        <span class="eyebrow">Featured projects</span>
+        <h2 id="featured-projects">Independent brands connected through Dhikrama.</h2>
+        <p class="lead">Visit each dedicated project website for product-specific or service-specific information.</p>
+      </div>
+      <div class="grid grid-2">
+        {projects.map((project) => (
+          <article class="card project-card">
+            <div class="project-meta">
+              {project.categories.map((category) => <span class="tag">{category}</span>)}
+            </div>
+            <h3>{project.name}</h3>
+            <p>{project.summary}</p>
+            <div class="button-row">
+              <a class="button secondary" href={`/projects/${project.slug}`}>View profile</a>
+              <a class="button primary" href={project.url} rel="noopener noreferrer">{project.cta}</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section" aria-labelledby="principles">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <span class="eyebrow">Operating principles</span>
+        <h2 id="principles">Built to stay practical, transparent, and focused.</h2>
+        <p>
+          Dhikrama keeps its role clear: introduce the portfolio, explain relationships, and guide visitors to the right project website.
+        </p>
+      </div>
+      <ol class="numbered">
+        <li>
+          <strong>Separate focus.</strong><br />
+          Project-specific commercial keywords and service details belong on each project website.
+        </li>
+        <li>
+          <strong>Clear relationships.</strong><br />
+          Nagili and Boringan are presented as separate projects within the Dhikrama portfolio.
+        </li>
+        <li>
+          <strong>No overclaiming.</strong><br />
+          Dhikrama uses portfolio and umbrella-brand language, not formal corporate group language.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="contact-cta">
+    <div class="narrow panel stack">
+      <span class="eyebrow">Get in touch</span>
+      <h2 id="contact-cta">Looking for the right project or contact path?</h2>
+      <p>
+        Contact Dhikrama for general portfolio inquiries. For logistics and transportation needs, visit Nagili directly.
+      </p>
+      <div class="button-row">
+        <a class="button primary" href="/contact">Contact Dhikrama</a>
+        <a class="button secondary" href="https://nagili.dhikrama.com" rel="noopener noreferrer">Go to Nagili</a>
+      </div>
+    </div>
+  </section>
+</Layout>

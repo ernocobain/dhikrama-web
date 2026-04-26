@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Legal / Disclaimer — Dhikrama';
+const description = 'A simple disclaimer explaining Dhikrama as an independent portfolio brand.';
+---
+
+<Layout title={title} description={description} canonicalPath="/legal">
+  <section class="hero">
+    <div class="narrow stack-lg">
+      <span class="eyebrow">Legal / Disclaimer</span>
+      <h1>Portfolio relationship disclaimer.</h1>
+      <p class="lead">
+        Dhikrama uses portfolio and umbrella-brand language to explain project relationships clearly and responsibly.
+      </p>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="narrow panel stack">
+      <h2>Disclaimer</h2>
+      <p>
+        Dhikrama is an independent portfolio brand. References to projects under Dhikrama are for portfolio, management, or operational identification purposes and do not necessarily imply a registered holding company, subsidiary structure, or formal corporate group unless stated otherwise.
+      </p>
+      <p>
+        Each project may operate with its own brand, website, and service focus.
+      </p>
+      <div class="button-row">
+        <a class="button primary" href="/projects">View projects</a>
+        <a class="button secondary" href="/contact">Contact</a>
+      </div>
+    </div>
+  </section>
+</Layout>
