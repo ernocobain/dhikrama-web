@@ -25,9 +25,9 @@ export const projects: Project[] = [
     name: 'Boringan',
     url: 'https://boringan.com',
     summary:
-      'Boringan is an independent project under the Dhikrama portfolio. Update this description based on the actual service or product category.',
+      'Boringan is an independent service project focused on boring work and cable excavation support.',
     description:
-      'Boringan is an independent project in the Dhikrama portfolio with its own website, focus, and service model.',
+      'Boringan is an independent service project in the Dhikrama portfolio, focused on practical boring work and cable excavation support.',
     categories: ['Independent Project', 'Service'],
     cta: 'Visit Boringan',
   },
