@@ -13,7 +13,7 @@ Harap baca Syarat dan Ketentuan ini ("Ketentuan") dengan cermat sebelum mengguna
 
 *   **Nagili:** Aplikasi penyedia jasa logistik untuk pengangkutan puing dan pindahan.
 *   **Pengguna/Klien:** Pihak yang menggunakan aplikasi untuk memesan layanan.
-*   **Mitra Driver:** Pihak penyedia armada dan tenaga yang bermitra dengan Nagili untuk menjalankan layanan.
+*   **Driver:** Tim operasional Nagili yang menjalankan layanan pengangkutan dan pengiriman.
 *   **Layanan:** Jasa "Buang Puing" (pengangkutan sisa konstruksi/sampah besar) dan "Pindahan" (jasa angkut barang pindahan rumah/kantor).
 
 ## 2. Akun Pengguna
@@ -29,13 +29,13 @@ Harap baca Syarat dan Ketentuan ini ("Ketentuan") dengan cermat sebelum mengguna
 3.  **Larangan Barang:**
     *   **Buang Puing:** Dilarang membuang limbah B3 (Bahan Berbahaya dan Beracun), limbah medis, atau barang ilegal.
     *   **Pindahan:** Dilarang mengangkut barang curian, narkotika, bahan peledak, atau hewan yang dilindungi tanpa izin.
-4.  **Ketersediaan:** Kami berupaya menyediakan layanan setiap saat, namun tidak menjamin ketersediaan Mitra Driver di semua lokasi dan waktu.
+4.  **Ketersediaan:** Kami berupaya menyediakan layanan setiap saat, namun tidak menjamin ketersediaan Driver di semua lokasi dan waktu.
 
-## 4. Tanggung Jawab Mitra Driver
+## 4. Tanggung Jawab Driver
 
-1.  Mitra Driver wajib memiliki SIM dan STNK yang masih berlaku.
-2.  Mitra Driver wajib mengaktifkan fitur lokasi (GPS) selama menjalankan pesanan untuk keperluan pelacakan real-time oleh Klien dan sistem.
-3.  Mitra Driver bertanggung jawab atas keselamatan berkendara dan keamanan barang yang diangkut.
+1.  Driver wajib memiliki SIM dan STNK yang masih berlaku.
+2.  Driver wajib mengaktifkan fitur lokasi (GPS) selama menjalankan pesanan untuk keperluan pelacakan real-time oleh Klien dan sistem.
+3.  Driver bertanggung jawab atas keselamatan berkendara dan keamanan barang yang diangkut.
 
 ## 5. Hak Kekayaan Intelektual
 
@@ -43,10 +43,10 @@ Aplikasi Nagili, termasuk logo, desain antarmuka, kode sumber, dan konten di dal
 
 ## 6. Batasan Tanggung Jawab
 
-Nagili menyediakan aplikasi sebagai penghubung antara Klien dan Mitra Driver. Kami tidak bertanggung jawab atas:
-1.  Kerusakan atau kehilangan barang selama proses pengangkutan, kecuali disebabkan langsung oleh kelalaian sistem kami (tanggung jawab utama ada pada Mitra Driver/asuransi jika tersedia).
+Nagili menyediakan layanan logistik dan transportasi langsung kepada Klien. Kami tidak bertanggung jawab atas:
+1.  Kerusakan atau kehilangan barang selama proses pengangkutan, kecuali disebabkan langsung oleh kelalaian sistem kami.
 2.  Gangguan layanan akibat masalah koneksi internet, GPS, atau kegagalan sistem pihak ketiga (Google/Firebase).
-3.  Tindakan pelanggaran hukum yang dilakukan oleh Pengguna atau Mitra Driver.
+3.  Tindakan pelanggaran hukum yang dilakukan oleh Pengguna atau pihak ketiga.
 
 ## 7. Penghentian Layanan
 

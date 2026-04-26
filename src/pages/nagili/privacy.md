@@ -7,7 +7,7 @@ title: Privacy Policy - Nagili
 
 **Terakhir Diperbarui: 27 Februari 2026**
 
-Selamat datang di **Nagili**, aplikasi logistik dan transportasi yang melayani jasa Buang Puing dan Pindahan. Privasi Anda sangat penting bagi kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat menggunakan aplikasi Nagili (baik aplikasi Klien maupun Mitra Driver).
+Selamat datang di **Nagili**, layanan logistik dan transportasi yang melayani jasa Buang Puing dan Pindahan. Privasi Anda sangat penting bagi kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat menggunakan layanan Nagili.
 
 ## 1. Informasi yang Kami Kumpulkan
 
@@ -21,7 +21,7 @@ Saat Anda mendaftar atau masuk menggunakan **Google Login**, kami mengumpulkan i
 
 ### b. Data Lokasi (Penting)
 *   **Untuk Klien (Pengguna Jasa):** Kami mengumpulkan data lokasi Anda untuk menentukan titik penjemputan dan pengantaran barang/puing.
-*   **Untuk Mitra Driver:** Kami mengumpulkan data lokasi Anda secara **real-time** (termasuk saat aplikasi berjalan di latar belakang) untuk:
+*   **Untuk Driver (Operasional):** Kami mengumpulkan data lokasi secara **real-time** (termasuk saat aplikasi berjalan di latar belakang) untuk:
     *   Memungkinkan Klien melacak posisi kendaraan saat pesanan berlangsung.
     *   Menavigasi rute terbaik menggunakan Google Maps.
     *   Menghitung biaya perjalanan yang akurat.
