@@ -7,12 +7,12 @@ title: Terms of Service - Nagili
 
 **Terakhir Diperbarui: 27 Februari 2026**
 
-Harap baca Syarat dan Ketentuan ini ("Ketentuan") dengan cermat sebelum menggunakan aplikasi **Nagili** ("Layanan"). Dengan mengunduh, mengakses, atau menggunakan aplikasi Nagili, Anda setuju untuk terikat oleh Ketentuan ini.
+Harap baca Syarat dan Ketentuan ini ("Ketentuan") dengan cermat sebelum menggunakan layanan Nagili ("Layanan"). Dengan mengakses atau menggunakan layanan Nagili, Anda setuju untuk terikat oleh Ketentuan ini.
 
 ## 1. Definisi
 
-*   **Nagili:** Aplikasi penyedia jasa logistik untuk pengangkutan puing dan pindahan.
-*   **Pengguna/Klien:** Pihak yang menggunakan aplikasi untuk memesan layanan.
+*   **Nagili:** Layanan logistik dan transportasi untuk pengangkutan puing, pindahan, pengiriman barang, dan kebutuhan distribusi.
+*   **Pengguna/Klien:** Pihak yang menggunakan layanan Nagili untuk memesan atau mengajukan kebutuhan layanan.
 *   **Driver:** Tim operasional Nagili yang menjalankan layanan pengangkutan dan pengiriman.
 *   **Layanan:** Jasa "Buang Puing" (pengangkutan sisa konstruksi/sampah besar) dan "Pindahan" (jasa angkut barang pindahan rumah/kantor).
 
@@ -24,7 +24,7 @@ Harap baca Syarat dan Ketentuan ini ("Ketentuan") dengan cermat sebelum mengguna
 
 ## 3. Penggunaan Layanan
 
-1.  **Pemesanan:** Klien dapat memesan layanan melalui aplikasi dengan menentukan lokasi penjemputan, tujuan, dan jenis layanan.
+1.  **Pemesanan:** Klien dapat memesan layanan melalui situs web atau kontak resmi Nagili dengan menentukan lokasi penjemputan, tujuan, dan jenis layanan.
 2.  **Biaya:** Estimasi biaya akan ditampilkan sebelum pemesanan dikonfirmasi. Biaya akhir mungkin menyesuaikan dengan kondisi lapangan (misalnya volume puing yang melebihi kapasitas atau jarak tambahan).
 3.  **Larangan Barang:**
     *   **Buang Puing:** Dilarang membuang limbah B3 (Bahan Berbahaya dan Beracun), limbah medis, atau barang ilegal.
@@ -44,17 +44,17 @@ Aplikasi Nagili, termasuk logo, desain antarmuka, kode sumber, dan konten di dal
 ## 6. Batasan Tanggung Jawab
 
 Nagili menyediakan layanan logistik dan transportasi langsung kepada Klien. Kami tidak bertanggung jawab atas:
-1.  Kerusakan atau kehilangan barang selama proses pengangkutan, kecuali disebabkan langsung oleh kelalaian sistem kami.
+1.  Kerusakan atau kehilangan barang selama proses pengangkutan, kecuali disebabkan langsung oleh kelalaian operasional kami. Nagili akan meninjau laporan kerusakan atau kehilangan berdasarkan kronologi, bukti pendukung, jenis barang, kondisi pengemasan, dan ketentuan layanan yang berlaku.
 2.  Gangguan layanan akibat masalah koneksi internet, GPS, atau kegagalan sistem pihak ketiga (Google/Firebase).
 3.  Tindakan pelanggaran hukum yang dilakukan oleh Pengguna atau pihak ketiga.
 
 ## 7. Penghentian Layanan
 
-Kami berhak untuk menangguhkan atau menghentikan akses Anda ke Layanan secara permanen atau sementara jika Anda melanggar Ketentuan ini, melakukan tindakan penipuan, atau menyalahgunakan aplikasi.
+Kami berhak untuk menangguhkan atau menghentikan akses Anda ke Layanan secara permanen atau sementara jika Anda melanggar Ketentuan ini, melakukan tindakan penipuan, atau menyalahgunakan layanan.
 
 ## 8. Perubahan Ketentuan
 
-Kami dapat mengubah Syarat dan Ketentuan ini sewaktu-waktu. Perubahan akan berlaku segera setelah dipublikasikan di dalam aplikasi.
+Kami dapat mengubah Syarat dan Ketentuan ini sewaktu-waktu. Perubahan akan berlaku segera setelah dipublikasikan di situs web kami.
 
 ## 9. Hukum yang Berlaku
 
@@ -63,4 +63,4 @@ Ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum Republik Indonesia
 ---
 
 **Kontak:**
-Jika ada pertanyaan mengenai Syarat dan Ketentuan ini, silakan hubungi kami melalui fitur bantuan di aplikasi atau email ke support@nagili.id.
+Jika ada pertanyaan mengenai Syarat dan Ketentuan ini, silakan hubungi kami melalui situs web atau email ke support@nagili.id.

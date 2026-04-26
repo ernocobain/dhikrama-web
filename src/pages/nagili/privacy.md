@@ -21,7 +21,7 @@ Saat Anda mendaftar atau masuk menggunakan **Google Login**, kami mengumpulkan i
 
 ### b. Data Lokasi (Penting)
 *   **Untuk Klien (Pengguna Jasa):** Kami mengumpulkan data lokasi Anda untuk menentukan titik penjemputan dan pengantaran barang/puing.
-*   **Untuk Driver (Operasional):** Kami mengumpulkan data lokasi secara **real-time** (termasuk saat aplikasi berjalan di latar belakang) untuk:
+*   **Untuk Driver (Operasional):** Kami mengumpulkan data lokasi secara **real-time** (termasuk saat sistem pelacakan berjalan di latar belakang) untuk:
     *   Memungkinkan Klien melacak posisi kendaraan saat pesanan berlangsung.
     *   Menavigasi rute terbaik menggunakan Google Maps.
     *   Menghitung biaya perjalanan yang akurat.
@@ -34,12 +34,12 @@ Kami dapat mengumpulkan informasi tentang perangkat yang Anda gunakan, termasuk 
 Informasi yang dikumpulkan digunakan untuk tujuan berikut:
 *   **Menyediakan Layanan:** Memproses pesanan Buang Puing dan Pindahan, serta menghubungkan Klien dengan Driver terdekat.
 *   **Pelacakan Real-time:** Menggunakan teknologi seperti **Firebase** untuk memberikan pembaruan lokasi langsung kepada pengguna.
-*   **Komunikasi:** Mengirimkan notifikasi terkait status pesanan, pembaruan aplikasi, atau informasi layanan penting.
+*   **Komunikasi:** Mengirimkan notifikasi terkait status pesanan, pembaruan layanan, atau informasi layanan penting.
 *   **Keamanan:** Memverifikasi identitas pengguna dan mencegah aktivitas penipuan.
 
 ## 3. Layanan Pihak Ketiga
 
-Kami menggunakan layanan pihak ketiga untuk operasional aplikasi:
+Kami menggunakan layanan pihak ketiga untuk operasional layanan Nagili:
 *   **Google Sign-In:** Untuk otentikasi pengguna yang aman.
 *   **Google Maps API:** Untuk layanan peta, rute, dan navigasi.
 *   **Firebase (Google):** Untuk backend, database real-time, dan analitik.
@@ -52,11 +52,11 @@ Kami berkomitmen untuk melindungi data Anda. Kami menggunakan standar industri d
 
 ## 5. Penghapusan Akun
 
-Anda memiliki hak untuk meminta penghapusan akun dan data pribadi Anda dari sistem kami. Silakan hubungi tim dukungan kami atau gunakan fitur "Hapus Akun" di dalam menu pengaturan aplikasi. Harap dicatat bahwa beberapa data mungkin disimpan untuk jangka waktu tertentu jika diwajibkan oleh hukum atau untuk keperluan audit transaksi.
+Anda memiliki hak untuk meminta penghapusan akun dan data pribadi Anda dari sistem kami. Silakan hubungi tim dukungan kami atau gunakan fitur penghapusan data yang tersedia. Harap dicatat bahwa beberapa data mungkin disimpan untuk jangka waktu tertentu jika diwajibkan oleh hukum atau untuk keperluan audit transaksi.
 
 ## 6. Perubahan Kebijakan Privasi
 
-Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan diberitahukan melalui aplikasi atau email. Penggunaan berkelanjutan atas layanan kami setelah perubahan tersebut dianggap sebagai persetujuan Anda.
+Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan diberitahukan melalui situs web atau email. Penggunaan berkelanjutan atas layanan kami setelah perubahan tersebut dianggap sebagai persetujuan Anda.
 
 ## 7. Hubungi Kami
 

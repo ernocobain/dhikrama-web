@@ -28,7 +28,7 @@ export const projects: Project[] = [
       'Boringan is an independent service project focused on boring work and cable excavation support.',
     description:
       'Boringan is an independent service project in the Dhikrama portfolio, focused on practical boring work and cable excavation support.',
-    categories: ['Independent Project', 'Service'],
+    categories: ['Infrastructure', 'Boring Work', 'Cable Excavation'],
     cta: 'Visit Boringan',
   },
 ];
