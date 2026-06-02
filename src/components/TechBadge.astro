@@ -1,0 +1,36 @@
+---
+interface Props {
+  techs: string[];
+  size?: 'sm' | 'md';
+}
+
+const { techs, size = 'sm' } = Astro.props;
+---
+
+<div class={`tech-badges ${size}`}>
+  {techs.map((tech) => (
+    <span class="badge">{tech}</span>
+  ))}
+</div>
+
+<style>
+  .tech-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    background: var(--surface-muted);
+    color: var(--brand);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .tech-badges.md .badge {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.95rem;
+  }
+</style>

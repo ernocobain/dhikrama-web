@@ -1,8 +1,8 @@
 ---
-import { projects } from '../data/projects';
+import { workProjects } from '../data/projects';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
   canonicalPath?: string;
   ogType?: 'website' | 'article';
@@ -11,8 +11,8 @@ interface Props {
 
 const frontmatter = Astro.props.frontmatter || {};
 const {
-  title = frontmatter.title || 'Dhikrama — Independent Project & Venture Portfolio',
-  description = frontmatter.description || 'Dhikrama is an independent portfolio of practical products, services, and ventures, including Nagili and Boringan.',
+  title = frontmatter.title || 'Dhikrama — Full-Stack Developer',
+  description = frontmatter.description || 'I build Android apps, modern web apps, and cloud APIs that ship fast and scale.',
   canonicalPath = Astro.url.pathname,
   ogType = 'website',
   structuredData = [],
@@ -22,29 +22,18 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://dhikrama.c
 const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
 const ogImage = new URL('/og-image.png', siteUrl).toString();
 const structuredDataItems = Array.isArray(structuredData) ? structuredData : [structuredData];
-const websiteSchema = {
+
+const personSchema = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'Dhikrama',
-  url: siteUrl,
-  description,
-  inLanguage: 'en',
+  '@type': 'Person',
+  'name': 'Dhikrama',
+  'jobTitle': 'Full-Stack Developer',
+  'url': siteUrl,
+  'description': 'I build Android apps, modern web apps, and cloud APIs that ship fast and scale.'
 };
-const portfolioSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'CreativeWork',
-  name: 'Dhikrama Project Portfolio',
-  url: siteUrl,
-  description: 'An independent portfolio brand for practical products, services, and ventures.',
-  hasPart: projects.map((project) => ({
-    '@type': 'CreativeWork',
-    name: project.name,
-    url: `${siteUrl}/projects/${project.slug}`,
-    sameAs: project.url,
-    description: project.summary,
-  })),
-};
-const allStructuredData = [websiteSchema, portfolioSchema, ...structuredDataItems].filter(Boolean);
+
+const allStructuredData = [personSchema, ...structuredDataItems].filter(Boolean);
+const year = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -80,8 +69,8 @@ const allStructuredData = [websiteSchema, portfolioSchema, ...structuredDataItem
           <span>Dhikrama</span>
         </a>
         <div class="nav-links">
+          <a href="/work">Work</a>
           <a href="/about">About</a>
-          <a href="/projects">Projects</a>
           <a href="/contact">Contact</a>
         </div>
       </nav>
@@ -95,38 +84,29 @@ const allStructuredData = [websiteSchema, portfolioSchema, ...structuredDataItem
       <div class="footer-grid">
         <section aria-labelledby="footer-brand">
           <h2 id="footer-brand">Dhikrama</h2>
-          <p>Dhikrama is an independent portfolio of projects and services.</p>
-          <p class="footer-note">Each project may operate with its own brand, website, and service focus.</p>
+          <p>Full-stack developer building high-performance Android apps, web apps, and cloud APIs.</p>
+          <p class="footer-note"><strong>Available for freelance.</strong></p>
         </section>
         <section aria-labelledby="footer-site-links">
-          <h2 id="footer-site-links">Website</h2>
+          <h2 id="footer-site-links">Links</h2>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="/work">Work</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/projects">Projects</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/legal">Legal / Disclaimer</a></li>
+            <li><a href="/legal">Legal</a></li>
           </ul>
         </section>
-        <section aria-labelledby="footer-project-links">
-          <h2 id="footer-project-links">Projects</h2>
+        <section aria-labelledby="footer-contact">
+          <h2 id="footer-contact">Contact</h2>
           <ul>
-            <li><a href="/projects/nagili">Nagili profile</a></li>
-            <li><a href="https://nagili.dhikrama.com" rel="noopener noreferrer">Nagili website</a></li>
-            <li><a href="/projects/boringan">Boringan profile</a></li>
-            <li><a href="https://boringan.com" rel="noopener noreferrer">Boringan website</a></li>
-          </ul>
-        </section>
-        <section aria-labelledby="footer-legal-links">
-          <h2 id="footer-legal-links">Policies</h2>
-          <ul>
-            <li><a href="/nagili/privacy">Nagili Privacy Policy</a></li>
-            <li><a href="/nagili/terms">Nagili Terms of Service</a></li>
+            <li><a href="mailto:hello@dhikrama.com">hello@dhikrama.com</a></li>
+            <li><a href="https://wa.me/6288233761607" rel="noopener noreferrer">+62 882-3376-1607</a></li>
+            <li><a href="https://github.com/dhikrama" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </section>
       </div>
       <div class="footer-bottom">
-        <p>© {new Date().getFullYear()} Dhikrama. Independent portfolio brand.</p>
+        <p>© {year} Dhikrama. Full-Stack Developer. Available for freelance worldwide.</p>
       </div>
     </footer>
   </body>
@@ -335,7 +315,7 @@ const allStructuredData = [websiteSchema, portfolioSchema, ...structuredDataItem
   .site-footer h2 { color: #fff; font-size: 1rem; letter-spacing: 0; margin-bottom: 0.8rem; }
   .site-footer p, .site-footer a, .site-footer li { color: #c2cad7; }
   .site-footer a:hover { color: #fff; }
-  .footer-grid { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 3rem 0; display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 2rem; }
+  .footer-grid { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 3rem 0; display: grid; grid-template-columns: 1.5fr repeat(2, 1fr); gap: 2rem; }
   .footer-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.45rem; }
   .footer-note { margin-top: 0.7rem; }
   .footer-bottom { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 1rem 0 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); }

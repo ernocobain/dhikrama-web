@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TechBadge from '../components/TechBadge.astro';
+import { workProjects } from '../data/projects';
+
+const title = "Work — Dhikrama";
+const description = "A collection of projects I've built end-to-end, ranging from Android apps to full-stack logistics platforms.";
+---
+
+<Layout title={title} description={description}>
+  <section class="hero">
+    <div class="container stack">
+      <span class="eyebrow">Portfolio</span>
+      <h1>Projects I've built.</h1>
+      <p class="lead">Each project below represents end-to-end work — from problem definition to deployment.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="work-grid">
+    <div class="container grid grid-2">
+      {workProjects.map((project) => (
+        <article class="card project-card">
+          <div class="stack">
+            <h3>{project.name} <br/> <small style="font-weight: 500; font-size: 0.9rem; color: var(--muted);">{project.subtitle}</small></h3>
+            <p>{project.summary}</p>
+            <TechBadge techs={project.techStack.slice(0, 4)} />
+          </div>
+          <div class="button-row">
+            <a class="button secondary" href={`/work/${project.slug}`}>View Case Study</a>
+            {project.url ? (
+              <a class="button primary" href={project.url} rel="noopener noreferrer">
+                {project.slug === 'ngeditapp' ? 'View on GitHub' : 'Live Demo'}
+              </a>
+            ) : (
+              <a class="button primary" href={`/work/${project.slug}`}>Case Study</a>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="narrow panel stack" style="text-align: center;">
+      <h2>Need a developer for your next project?</h2>
+      <p>I'm available for freelance work and open to discussing new opportunities.</p>
+      <div class="button-row" style="justify-content: center;">
+        <a class="button primary" href="/contact">Get In Touch</a>
+        <a class="button secondary" href="/about">About Me</a>
+      </div>
+    </div>
+  </section>
+</Layout>

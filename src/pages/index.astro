@@ -1,114 +1,136 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { projects } from '../data/projects';
+import TechBadge from '../components/TechBadge.astro';
+import { workProjects } from '../data/projects';
 
-const title = 'Dhikrama — Independent Project & Venture Portfolio';
-const description = 'Dhikrama is an independent portfolio of practical products, services, and ventures, including Nagili and Boringan.';
+const featuredProjects = workProjects.slice(0, 2);
 ---
 
-<Layout title={title} description={description} canonicalPath="/">
+<Layout>
+  <!-- SECTION 1 — HERO -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Independent portfolio brand</span>
-        <h1>Practical projects, services, and ventures under one clear umbrella.</h1>
+        <span class="eyebrow">AVAILABLE FOR FREELANCE</span>
+        <h1>I build Android apps, web apps, and cloud APIs that ship fast.</h1>
         <p class="lead">
-          Dhikrama is an independent portfolio of digital products, services, and ventures built to solve practical problems in the real world.
+          Full-stack developer specializing in Android (Kotlin, Jetpack Compose), modern web (Astro, TypeScript), and serverless APIs (Cloudflare Workers, Firebase).
         </p>
-        <div class="hero-actions" aria-label="Primary actions">
-          <a class="button primary" href="/projects">Explore projects</a>
-          <a class="button secondary" href="/about">About Dhikrama</a>
+        <div class="hero-actions">
+          <a class="button primary" href="/work">View My Work</a>
+          <a class="button secondary" href="/contact">Get In Touch</a>
         </div>
       </div>
-      <aside class="panel stack" aria-labelledby="portfolio-summary">
-        <span class="eyebrow">Portfolio snapshot</span>
-        <h2 id="portfolio-summary">Founder-led and independently managed.</h2>
-        <p>
-          Dhikrama acts as a trust layer, credibility layer, and navigation hub for independent projects with their own websites and service focus.
-        </p>
+      <aside class="panel stack" aria-labelledby="quick-stats">
+        <span class="eyebrow">Quick Stats</span>
+        <h2 id="quick-stats" class="h3">Expertise at a glance.</h2>
         <ul class="plain-list">
-          <li>Nagili for logistics and transportation.</li>
-          <li>Boringan as an independent project in the portfolio.</li>
-          <li>Future projects can be added without changing the overall structure.</li>
+          <li><strong>4+</strong> projects shipped end-to-end</li>
+          <li><strong>3+</strong> years professional experience</li>
+          <li>Android + Web + Cloud focus</li>
+          <li>Remote-friendly worldwide</li>
         </ul>
       </aside>
     </div>
   </section>
 
-  <section class="section soft-section" aria-labelledby="what-is-dhikrama">
-    <div class="narrow stack-lg">
-      <span class="eyebrow">What Dhikrama is</span>
-      <h2 id="what-is-dhikrama">An umbrella brand for independent projects.</h2>
-      <p class="lead">
-        Dhikrama is a founder-led portfolio of independent projects, including logistics, digital services, and practical technology products.
-      </p>
-      <p>
-        Each project may operate with its own brand, website, and service model. Dhikrama provides a clear way to understand how these projects relate to one another without presenting itself as a formal corporate group.
-      </p>
+  <!-- SECTION 2 — TECH STACK -->
+  <section class="section soft-section" aria-labelledby="tech-stack">
+    <div class="container stack-lg">
+      <div class="stack">
+        <span class="eyebrow">Tech Stack</span>
+        <h2 id="tech-stack">Tools I use to build production-ready software.</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Android</h3>
+          <p>Native development with modern tools for performance and scale.</p>
+          <TechBadge techs={["Kotlin", "Jetpack Compose", "Media3", "WorkManager", "Room DB", "Coroutines"]} />
+        </div>
+        <div class="card">
+          <h3>Web</h3>
+          <p>Fast, SEO-optimized frontends using the latest frameworks.</p>
+          <TechBadge techs={["Astro", "TypeScript", "Vue 3", "Tailwind CSS", "Vite"]} />
+        </div>
+        <div class="card">
+          <h3>Cloud & Backend</h3>
+          <p>Scalable, low-latency infrastructure and serverless APIs.</p>
+          <TechBadge techs={["Cloudflare Workers", "Hono.js", "Firebase", "D1", "REST APIs"]} />
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="featured-projects">
+  <!-- SECTION 3 — FEATURED WORK -->
+  <section class="section" aria-labelledby="featured-work">
     <div class="container stack-lg">
       <div class="stack">
-        <span class="eyebrow">Featured projects</span>
-        <h2 id="featured-projects">Independent brands connected through Dhikrama.</h2>
-        <p class="lead">Visit each dedicated project website for product-specific or service-specific information.</p>
+        <span class="eyebrow">Featured Work</span>
+        <h2 id="featured-work">Recent projects I've built end-to-end.</h2>
       </div>
       <div class="grid grid-2">
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <article class="card project-card">
-            <div class="project-meta">
-              {project.categories.map((category) => <span class="tag">{category}</span>)}
+            <div class="stack">
+              <h3>{project.name} <br/> <small style="font-weight: 500; font-size: 0.9rem; color: var(--muted);">{project.subtitle}</small></h3>
+              <p>{project.summary}</p>
+              <TechBadge techs={project.techStack.slice(0, 4)} />
             </div>
-            <h3>{project.name}</h3>
-            <p>{project.summary}</p>
             <div class="button-row">
-              <a class="button secondary" href={`/projects/${project.slug}`}>View profile</a>
-              <a class="button primary" href={project.url} rel="noopener noreferrer">{project.cta}</a>
+              <a class="button secondary" href={`/work/${project.slug}`}>View Case Study</a>
+              {project.url && (
+                <a class="button primary" href={project.url} rel="noopener noreferrer">
+                  {project.slug === 'ngeditapp' ? 'View on GitHub' : 'Live Demo'}
+                </a>
+              )}
             </div>
           </article>
         ))}
       </div>
-    </div>
-  </section>
-
-  <section class="section soft-section" aria-labelledby="principles">
-    <div class="container grid grid-2">
-      <div class="stack">
-        <span class="eyebrow">Operating principles</span>
-        <h2 id="principles">Built to stay practical, transparent, and focused.</h2>
-        <p>
-          Dhikrama keeps its role clear: introduce the portfolio, explain relationships, and guide visitors to the right project website.
-        </p>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/work" class="button secondary">View all work →</a>
       </div>
-      <ol class="numbered">
-        <li>
-          <strong>Separate focus.</strong><br />
-          Project-specific commercial keywords and service details belong on each project website.
-        </li>
-        <li>
-          <strong>Clear relationships.</strong><br />
-          Nagili and Boringan are presented as separate projects within the Dhikrama portfolio.
-        </li>
-        <li>
-          <strong>No overclaiming.</strong><br />
-          Dhikrama uses portfolio and umbrella-brand language, not formal corporate group language.
-        </li>
-      </ol>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="contact-cta">
-    <div class="narrow panel stack">
-      <span class="eyebrow">Get in touch</span>
-      <h2 id="contact-cta">Looking for the right project or contact path?</h2>
-      <p>
-        Contact Dhikrama for general portfolio inquiries. For logistics and transportation needs, visit Nagili directly.
+  <!-- SECTION 4 — SERVICES -->
+  <section class="section soft-section" aria-labelledby="services">
+    <div class="container stack-lg">
+      <div class="stack">
+        <span class="eyebrow">What I Offer</span>
+        <h2 id="services">Services I provide as a freelance developer.</h2>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Android App Development</h3>
+          <p>Native Android apps with Jetpack Compose, Media3, and modern architecture. From concept to Play Store.</p>
+        </div>
+        <div class="card">
+          <h3>Web Apps & Landing Pages</h3>
+          <p>Fast, SEO-optimized websites and web apps using Astro, Vue, and Tailwind. Built for performance.</p>
+        </div>
+        <div class="card">
+          <h3>API & Cloud Infrastructure</h3>
+          <p>Serverless APIs on Cloudflare Workers, Firebase integration, and scalable backend architecture.</p>
+        </div>
+        <div class="card">
+          <h3>Full-Stack Products</h3>
+          <p>End-to-end development — frontend, backend, cloud, and deployment. One developer, complete solution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — CTA -->
+  <section class="section" aria-labelledby="cta">
+    <div class="narrow panel stack" style="text-align: center;">
+      <h2 id="cta">Let's build something together.</h2>
+      <p class="lead">
+        I'm available for freelance projects worldwide. Whether you need an Android app, a fast website, or a complete product — let's talk.
       </p>
-      <div class="button-row">
-        <a class="button primary" href="/contact">Contact Dhikrama</a>
-        <a class="button secondary" href="https://nagili.dhikrama.com" rel="noopener noreferrer">Go to Nagili</a>
+      <div class="button-row" style="justify-content: center;">
+        <a class="button primary" href="/contact">Contact Me</a>
+        <a class="button secondary" href="/work">View My Work</a>
       </div>
     </div>
   </section>

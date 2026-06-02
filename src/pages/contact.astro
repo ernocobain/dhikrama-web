@@ -1,48 +1,49 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = 'Contact — Dhikrama';
-const description = 'Contact Dhikrama for general portfolio inquiries, or visit each project website for project-specific inquiries.';
+const title = "Contact — Dhikrama";
+const description = "Get in touch for freelance inquiries, project collaborations, or just to say hi.";
 ---
 
-<Layout title={title} description={description} canonicalPath="/contact">
+<Layout title={title} description={description}>
   <section class="hero">
-    <div class="narrow stack-lg">
+    <div class="container stack">
       <span class="eyebrow">Contact</span>
-      <h1>Find the right contact path.</h1>
-      <p class="lead">
-        Use Dhikrama for general portfolio inquiries. For project-specific needs, contact the dedicated project directly.
-      </p>
+      <h1>Let's work together.</h1>
+      <p class="lead">Have a project in mind? I'd love to hear about it. Reach out directly or use the information below.</p>
     </div>
   </section>
 
-  <section class="section soft-section" aria-labelledby="contact-options">
-    <div class="container grid grid-3">
-      <article class="card">
-        <h2 id="contact-options">Dhikrama</h2>
-        <p>General portfolio inquiries, project introductions, and collaboration context.</p>
-        <p><strong>Email:</strong> Dhikrama currently routes inquiries through each project's dedicated contact channel.</p>
-      </article>
-      <article class="card">
-        <h2>Nagili</h2>
-        <p>For logistics and transportation inquiries, please contact Nagili directly.</p>
-        <a class="button primary" href="https://nagili.dhikrama.com" rel="noopener noreferrer">Visit Nagili</a>
-      </article>
-      <article class="card">
-        <h2>Boringan</h2>
-        <p>For Boringan-related inquiries, please visit Boringan.</p>
-        <a class="button primary" href="https://boringan.com" rel="noopener noreferrer">Visit Boringan</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="contact-note">
-    <div class="narrow panel stack">
-      <span class="eyebrow">Note</span>
-      <h2 id="contact-note">Project websites are the best place for project-specific details.</h2>
-      <p>
-        Dhikrama is designed as a portfolio and umbrella-brand website. It links to the dedicated websites where each project can explain its own service details, product updates, and contact flow.
-      </p>
+  <section class="section" aria-labelledby="contact-info">
+    <div class="container grid grid-2">
+      <div class="stack">
+        <div class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:hello@dhikrama.com" class="lead" style="font-weight: 700;">hello@dhikrama.com</a></p>
+        </div>
+        <div class="card">
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/6288233761607" class="lead" style="font-weight: 700;" rel="noopener noreferrer">+62 882-3376-1607</a></p>
+        </div>
+        <div class="card">
+          <h3>Response Time</h3>
+          <p class="lead">I typically respond within 24 hours.</p>
+        </div>
+      </div>
+      
+      <aside class="panel stack">
+        <h2 class="h3">What to include in your message:</h2>
+        <ol class="numbered">
+          <li>Project description and goals</li>
+          <li>Timeline and budget range</li>
+          <li>Tech stack preferences (if any)</li>
+          <li>Any reference apps or websites</li>
+        </ol>
+        <div class="button-row" style="margin-top: 1.5rem;">
+          <a href="mailto:hello@dhikrama.com" class="button primary">Send Email</a>
+          <a href="https://github.com/dhikrama" class="button secondary" rel="noopener noreferrer">View GitHub</a>
+        </div>
+      </aside>
     </div>
   </section>
 </Layout>

@@ -1,54 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = 'About Dhikrama — Founder-Led Project Portfolio';
-const description = 'Learn how Dhikrama works as an independent umbrella brand for practical projects, services, and ventures.';
+const title = "About — Dhikrama";
+const description = "Learn more about Dhikrama, a full-stack developer specializing in Android, modern web, and cloud APIs.";
 ---
 
-<Layout title={title} description={description} canonicalPath="/about">
+<Layout title={title} description={description}>
   <section class="hero">
-    <div class="narrow stack-lg">
-      <span class="eyebrow">About Dhikrama</span>
-      <h1>An independent umbrella brand for practical projects.</h1>
+    <div class="container stack">
+      <span class="eyebrow">About Me</span>
+      <h1>Hi, I'm Dhikrama.</h1>
       <p class="lead">
-        Dhikrama exists to build, manage, and connect practical products and services through a clear portfolio identity.
+        I'm a full-stack developer from Indonesia, specializing in Android apps, modern web, and cloud APIs. I build complete products — from idea to deployment.
       </p>
     </div>
   </section>
 
-  <section class="section soft-section" aria-labelledby="what-it-means">
+  <section class="section soft-section" aria-labelledby="background">
+    <div class="narrow stack-lg">
+      <span class="eyebrow">Background</span>
+      <h2 id="background">3+ years of building digital products.</h2>
+      <p>
+        My journey in software development has been focused on building practical, high-performance applications. I have extensive experience in the Android ecosystem (Kotlin, Jetpack Compose) and modern web technologies (Astro, TypeScript, Vue).
+      </p>
+      <p>
+        I've successfully delivered various projects, including a full-stack logistics platform with real-time tracking, an AI-powered video editor for Android, and several high-performance business websites. I enjoy taking full ownership of the development lifecycle, from architecture and UI design to cloud infrastructure and deployment.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="approach">
     <div class="container grid grid-2">
       <div class="stack">
-        <h2 id="what-it-means">What Dhikrama means here</h2>
-        <p>
-          Dhikrama is an independent portfolio brand for several projects and services. It may include digital products, operational services, logistics, and other ventures as the portfolio grows.
-        </p>
-        <p>
-          The portfolio is currently founder-led or independently managed. Each project may have its own brand, website, focus, and service model.
-        </p>
+        <span class="eyebrow">Approach</span>
+        <h2 id="approach">How I work.</h2>
+        <p>I believe in building software that is not just functional, but also maintainable and scalable.</p>
       </div>
-      <div class="panel stack">
-        <h2>Simple and transparent positioning</h2>
-        <ul class="plain-list">
-          <li>Dhikrama is an independent portfolio brand.</li>
-          <li>Each project can operate with its own dedicated website.</li>
-          <li>Portfolio references are used for management, operational, or identification clarity.</li>
-          <li>Dhikrama does not need to present itself as a formal corporate structure.</li>
-        </ul>
-      </div>
+      <ol class="numbered">
+        <li>
+          <strong>End-to-end ownership.</strong><br />
+          I handle everything from frontend development and mobile apps to backend APIs and cloud deployment.
+        </li>
+        <li>
+          <strong>Ship fast, iterate.</strong><br />
+          I focus on delivering a high-quality MVP (Minimum Viable Product) quickly, then improving it based on real-world feedback.
+        </li>
+        <li>
+          <strong>Clean, maintainable code.</strong><br />
+          I prioritize solid architecture (like Clean Architecture on Android) to ensure the codebase remains scalable and easy to maintain.
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="role">
-    <div class="narrow stack-lg">
-      <span class="eyebrow">Portfolio role</span>
-      <h2 id="role">Dhikrama helps visitors understand the ecosystem.</h2>
-      <p>
-        Instead of competing with project websites, Dhikrama introduces the broader portfolio and directs visitors to the right destination. Nagili remains the dedicated logistics and transportation brand. Boringan remains its own dedicated project.
+  <section class="section soft-section" aria-labelledby="availability">
+    <div class="narrow panel stack" style="text-align: center;">
+      <span class="eyebrow" style="margin: 0 auto;">Availability</span>
+      <h2 id="availability">Available for freelance worldwide.</h2>
+      <p class="lead">
+        I am remote-friendly and open to both short-term and long-term engagements. Whether you're a startup looking to build an MVP or an established business needing a specialized developer — let's talk.
       </p>
-      <div class="button-row">
-        <a class="button primary" href="/projects">View projects</a>
-        <a class="button secondary" href="/legal">Read disclaimer</a>
+      <div class="button-row" style="justify-content: center;">
+        <a class="button primary" href="/contact">Contact Me</a>
+        <a class="button secondary" href="/work">View My Work</a>
       </div>
     </div>
   </section>

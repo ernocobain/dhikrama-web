@@ -1,0 +1,99 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TechBadge from '../../components/TechBadge.astro';
+import { getAllWorkSlugs, getWorkProject } from '../../data/projects';
+
+export async function getStaticPaths() {
+  const slugs = getAllWorkSlugs();
+  return slugs.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const project = getWorkProject(slug!);
+
+if (!project) {
+  return Astro.redirect('/404');
+}
+
+const title = `${project.name} — Case Study`;
+const description = project.summary;
+---
+
+<Layout title={title} description={description}>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Case Study</span>
+        <h1>{project.name}</h1>
+        <p class="lead">{project.subtitle}</p>
+      </div>
+      <aside class="panel stack">
+        <div>
+          <h3 class="eyebrow" style="border: none; padding: 0; margin-bottom: 0.5rem; background: transparent;">Role</h3>
+          <p><strong>{project.role}</strong></p>
+        </div>
+        <div>
+          <h3 class="eyebrow" style="border: none; padding: 0; margin-bottom: 0.5rem; background: transparent;">Tech Stack</h3>
+          <TechBadge techs={project.techStack} />
+        </div>
+        {project.url && (
+          <div class="button-row" style="margin-top: 1rem;">
+            <a href={project.url} class="button primary" rel="noopener noreferrer">
+              {project.slug === 'ngeditapp' ? 'View on GitHub' : 'Live Demo'}
+            </a>
+          </div>
+        )}
+      </aside>
+    </div>
+  </header>
+
+  <div class="container stack-lg section">
+    <section class="grid grid-2">
+      <div class="stack">
+        <span class="eyebrow">The Problem</span>
+        <h2>The Challenge</h2>
+        <p>{project.problem}</p>
+      </div>
+      <div class="stack">
+        <span class="eyebrow">The Solution</span>
+        <h2>How I Solved It</h2>
+        <p>{project.solution}</p>
+      </div>
+    </section>
+
+    <section class="panel stack">
+      <span class="eyebrow">Outcome</span>
+      <h2>Result & Impact</h2>
+      <p class="lead">{project.outcome}</p>
+    </section>
+
+    <section class="stack-lg">
+      <div class="stack">
+        <span class="eyebrow">Key Highlights</span>
+        <h2>Technical Achievements</h2>
+      </div>
+      <ol class="numbered">
+        {project.highlights.map((highlight) => (
+          <li>{highlight}</li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="stack-lg">
+      <div class="stack">
+        <span class="eyebrow">Tech Stack</span>
+        <h2>Tools Used</h2>
+      </div>
+      <div class="card">
+        <TechBadge techs={project.techStack} size="md" />
+      </div>
+    </section>
+
+    <footer class="button-row" style="justify-content: center; padding-top: 4rem;">
+      <a href="/work" class="button secondary">View All Work</a>
+      <a href="/contact" class="button primary">Get In Touch</a>
+    </footer>
+  </div>
+</Layout>
