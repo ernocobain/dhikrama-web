@@ -18,6 +18,27 @@ export type WorkProject = {
 
 export const workProjects: WorkProject[] = [
   {
+    slug: 'ai-agent-orchestrator',
+    name: 'AI Agent Orchestrator',
+    subtitle: 'Multi-Agent System for Autonomous Task Execution',
+    summary: 'Framework for orchestrating multiple AI agents to decompose, plan, and execute complex tasks autonomously with persistent memory and tool-use.',
+    description: 'Built an agentic AI system that coordinates multiple specialized LLM agents. Features include dynamic task decomposition, tool-use execution (web, terminal, code), persistent memory via vector search, and human-in-the-loop approval flows.',
+    problem: 'Single LLM calls struggle with complex, multi-step tasks requiring research, coding, and verification. Users need systems that can break down goals and execute them autonomously.',
+    solution: 'Designed a multi-agent architecture with an Orchestrator agent that delegates to specialized Workers (Research, Coding, Review). Implemented MCP for tool discovery and a Kanban-style state machine for task tracking.',
+    outcome: 'Autonomous system capable of handling complex development tasks, reducing manual coding time by 60% for repetitive workflows.',
+    techStack: ['TypeScript', 'LLM APIs', 'CrewAI', 'MCP', 'Vector Search', 'Hermes Framework'],
+    role: 'AI Architect — System design, agent logic, tool integration, and memory management',
+    url: '',
+    categories: ['AI', 'Automation', 'Agentic'],
+    cta: 'Case Study',
+    highlights: [
+      'Multi-agent decomposition & coordination',
+      'Tool-use execution with MCP integration',
+      'Persistent memory & RAG for context',
+      'Human-in-the-loop approval workflow'
+    ]
+  },
+  {
     slug: "ngeditapp",
     name: "NgeditApp",
     subtitle: "AI-Powered Video Editor for Android",
