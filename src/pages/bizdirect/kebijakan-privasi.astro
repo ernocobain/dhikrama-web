@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Kebijakan Privasi BizDirect — Dhikrama';
+const description = 'Kebijakan Privasi aplikasi BizDirect oleh Dhikrama untuk pemenuhan syarat rilis Google Play Store.';
+---
+
+<Layout title={title} description={description} canonicalPath="/bizdirect/kebijakan-privasi">
+  <section class="hero">
+    <div class="narrow stack-lg">
+      <span class="eyebrow">Aplikasi BizDirect</span>
+      <h1>Kebijakan Privasi</h1>
+      <p class="lead">
+        Pernyataan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan aplikasi BizDirect.
+      </p>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="narrow panel stack" style="gap: 24px;">
+      <h2>1. Informasi yang Kami Kumpulkan</h2>
+      <p>
+        Aplikasi BizDirect memerlukan beberapa jenis data dari pengguna untuk dapat beroperasi dengan benar:
+      </p>
+      <ul>
+        <li><strong>Informasi Akun Google:</strong> Kami menggunakan Google Sign-In / Credential Manager untuk proses login. Kami mengumpulkan alamat email, nama tampilan, dan foto profil Anda guna mengidentifikasi akun Anda secara lokal di dalam aplikasi.</li>
+        <li><strong>Data Profil Bisnis Google (Google Business Profile):</strong> Sesuai fungsi utama aplikasi untuk mengelola Profil Bisnis, kami mengambil, menampilkan, dan memperbarui informasi lokasi bisnis Anda (nama toko, alamat, kategori, nomor telepon, jam operasional, foto, ulasan pelanggan, postingan, dan laporan analitik mingguan).</li>
+        <li><strong>Token Notifikasi (FCM Token):</strong> Kami mengumpulkan token registrasi Firebase Cloud Messaging (FCM) untuk mengirimkan notifikasi penting seperti ulasan baru atau laporan performa langsung ke perangkat Anda.</li>
+        <li><strong>Laporan Diagnostik & Crash:</strong> Kami menggunakan Firebase Crashlytics untuk mengumpulkan data laporan *crash* aplikasi secara anonim guna menganalisis dan memperbaiki kegagalan sistem.</li>
+      </ul>
+
+      <h2>2. Bagaimana Kami Menggunakan Informasi</h2>
+      <p>
+        Semua informasi yang dikumpulkan digunakan semata-mata untuk:
+      </p>
+      <ul>
+        <li>Menyediakan fungsi pengelolaan data Profil Bisnis Google Anda melalui integrasi resmi API Google Business Profile.</li>
+        <li>Menyimpan sesi otentikasi login secara aman dan lokal di perangkat Anda menggunakan Android SharedPreferences.</li>
+        <li>Mengirimkan notifikasi push real-time terkait aktivitas bisnis Anda.</li>
+        <li>Meningkatkan kinerja aplikasi dan stabilitas sistem.</li>
+      </ul>
+
+      <h2>3. Berbagi Data dengan Pihak Ketiga</h2>
+      <p>
+        Kami tidak menjual, menyewakan, atau menukar data pribadi Anda kepada pihak ketiga mana pun. Data Anda hanya dikirim langsung dan aman ke server Google yang resmi melalui Google Business API, Google Firebase SDK, dan Google Play Services.
+      </p>
+
+      <h2>4. Keamanan Data Anda</h2>
+      <p>
+        Kami sangat berkomitmen terhadap keamanan data Anda. File kredensial akses autentikasi (*access token*) disimpan secara terenkripsi dan aman di penyimpanan lokal ponsel Anda, dan tidak pernah disimpan atau ditransmisikan ke server pihak ketiga mana pun selain infrastruktur resmi Google.
+      </p>
+
+      <h2>5. Hak Pengguna & Penghapusan Data</h2>
+      <p>
+        Anda dapat memilih untuk keluar (*logout*) dari akun Anda di dalam aplikasi kapan saja untuk membersihkan seluruh data autentikasi lokal dari ponsel Anda. Jika Anda ingin meminta penghapusan informasi secara permanen atau memiliki pertanyaan terkait kebijakan ini, silakan hubungi kami melalui email di <strong>hello@dhikrama.com</strong>.
+      </p>
+
+      <h2>6. Perubahan pada Kebijakan Privasi</h2>
+      <p>
+        Kami dapat memperbarui kebijakan privasi ini secara berkala. Perubahan akan berlaku segera setelah kebijakan privasi yang baru dipublikasikan di halaman ini.
+      </p>
+      
+      <p style="margin-top: 20px; font-size: 14px; color: var(--muted);">
+        Terakhir Diperbarui: 18 Juni 2026
+      </p>
+
+      <div class="button-row" style="margin-top: 32px;">
+        <a class="button primary" href="/">Kembali ke Beranda</a>
+        <a class="button secondary" href="mailto:hello@dhikrama.com">Hubungi Email Bantuan</a>
+      </div>
+    </div>
+  </section>
+</Layout>
